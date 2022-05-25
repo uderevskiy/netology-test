@@ -1,7 +1,7 @@
 FROM golang:1.16 AS builder
 
 # Copy the code from the host and compile it
-WORKDIR $GOPATH/src/netology-test/
+WORKDIR $GOPATH/src/github.com/uderevskiy/netology-test/
 COPY . ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix nocgo -o /app .
 
